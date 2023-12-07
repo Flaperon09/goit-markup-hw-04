@@ -1,0 +1,461 @@
+/* Глобальные переменные */
+:root {
+    /* Основной цвет фона */
+    --bkg-color: #ffffff;
+    /* Цвет фона заголовков */
+    --bkg-header: #2F303A;
+    /* Вспомогательный цвет фона */
+    --bkg-aux: #F5F4FA;
+    /* Основной цвет текста */
+    --color: #757575;
+    /* Базовый цвет логотипа */
+    --color-logo: #000000;
+    /* Белый цвет */
+    --color-white: #ffffff;
+    /* Цвет заголовков */
+    --color-header: #212121;
+    /* Цвет акцента */
+    --color-accent: #2196F3;
+    /* Цвет контактов в футере */
+    --footer-contacts: rgba(255, 255, 255, 0.60);
+    /* Цвет разделителя */
+    --line: #ececec;
+    /* Цвет бордера карточек */
+    --color-border: #eeeeee;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    /* Основной цвет фона */
+    background-color: var(--bkg-color); 
+    /* Основной цвет текста */
+    color: var(--color);
+    /* Параметры шрифта */
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    /* Сброс отступов */
+    margin: 0;
+}
+
+/* Общая стилизация заголовков */
+h2,
+h3 {
+    color: var(--color-header);
+    background-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+img {
+    display: block;
+}
+
+/* Стили контейнера */
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Стиль для сброса настроек */
+.list,
+li > p
+    {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Нижняя линия в хедере */
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.main-section .container {
+    width: 698px;
+}
+
+/* Стиль для сброса подчёркивания ссылок */
+.none-decor {
+    text-decoration: none;
+}
+
+/* Стилизация логотипа */
+.logo {
+    color: var(--color-logo);
+
+    text-decoration: none;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.78px;
+    margin-right: 93px;
+}
+
+.logo-accent {
+    color: var(--color-accent);
+}
+
+.logo.logo-accent,
+.logo.logo-footer {
+    margin-right: 0;
+}
+
+/* Стилизация навигации по сайту */
+.site-nav {
+    display: flex;
+}
+/* Правый отступ для меню, кроме крайнего пункта */
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav a {
+    display: block;
+
+    color: var(--color-header);
+    text-decoration: none;
+
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.28px;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a.current {
+    color: var(--color-accent);
+
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.28px;
+}
+
+/* Стилизация контактов */
+.contacts {
+    display: flex;
+    margin-left: auto;
+}
+/* Правый отступ для ссылок, кроме крайнего */
+.contacts .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contacts a {
+    color: var(--color);
+    text-decoration: none;
+
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.28px;
+}
+
+.contacts a:hover,
+.contacts a:focus {
+    color: var(--color-accent);
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+
+/* Стилизация главной секции */
+.main-section {
+    color: var(--color-white);
+    background-color: var(--bkg-header);
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+/* Стилизация заголовка главной секции */
+.main-header {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+/* Стиль для кнопки в первой секции */
+.button {
+    display: inline-block;
+
+    color: var(--color-white);
+    background-color: var(--color-accent);
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87x;
+    letter-spacing: 0.96px;
+
+    border-radius: 4px;
+    border: 0px;
+    padding: 10px 32px;
+    min-width: 216px;
+}
+
+.button:active {
+    color: var(--color-accent);
+    background-color: var(--color-white);
+}
+
+/* Стилизация секций */
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+.advantages
+    {
+    background-color: var(--bkg-color);
+    padding-top: 94px;
+    padding-bottom: 0px;
+}
+
+.advantages-flex {
+    display: flex;
+    justify-items: space-between;
+}
+
+.item-adv {
+    width: 270px;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+
+.item-adv:last-child {
+    margin-right: 0;
+}
+
+.work {
+    background-color: var(--bkg-color);
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.h3-advantages {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.flex-hight {
+    height: 294px;
+}
+
+.h2-work,
+.h2-team {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1.08px;
+
+    margin-bottom: 50px;
+}
+
+.team {
+    background-color: var(--bkg-aux);
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.h3-team {    
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.team-label {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.flex-team {
+    display: flex;
+    text-align: center;
+}
+
+.team-element {
+    width: 270px;
+    margin-right: 30px;
+}
+
+.team-element:last-child {
+    margin-right: 0;
+}
+
+.label {
+    font-size: 16px;
+    letter-spacing: 0.48px;
+    line-height: normal;
+    margin: 0;
+}
+
+/* Стиль футера */
+.footer {
+    background-color: var(--bkg-header);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.logo-ft {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.address {
+    color: var(--color-white);
+    font-style: normal;    
+}
+
+.address a {
+    display: block;
+    color: var(--footer-contacts);
+    text-decoration: none;
+    margin-top: 9px;
+}
+
+.address a:hover,
+.address a:focus {
+    color: var(--color-accent);
+}
+
+.logo-footer {
+    color: var(--color-white);
+}
+
+/* --- СТИЛИ СТРАНИЦЫ PORTFOLIO --- */
+.examples {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.button-portfolio {
+    display: flex;
+
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.button-flex {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+.button-flex:last-child {
+    margin-right: 0;
+}
+
+.item-button {
+        color: var(--color-header);
+        background-color: var(--bkg-aux);
+
+        text-align: center;
+        font-size: 16px;    
+        font-weight: 500;
+        line-height: 1.62;
+        letter-spacing: 0.48px;
+
+        border: 0;
+        border-radius: 4px;
+        padding-left: 22px;
+        padding-right: 22px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        cursor: pointer;
+}
+
+.first {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.button-portfolio button:hover,
+.button-portfolio button:focus {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+}
+
+.button-portfolio button:active {
+    color: var(--color-accent);
+    background-color: var(--color-white);
+}
+
+.h2-portfolio {
+    color: var(--color-header);
+    
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.08px;
+
+    margin-bottom: 4px;
+}
+
+.chapter {
+    color: var(--color);
+    
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.48px;
+
+    margin: 0;
+}
+
+.item-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-element {
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.flex-element:nth-child(3n) {
+    margin-right: 0;
+}
+
+.flex-element:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
+.portfolio-label {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    border-bottom: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+}
